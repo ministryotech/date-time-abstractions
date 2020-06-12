@@ -17,7 +17,7 @@ namespace Ministry
         /// <value>
         /// The generally accepted minimum DateTime for dating digital resources.
         /// </value>
-        private static DateTime MinUnixTime => new DateTime(1970, 1, 1, 0, 0, 0);
+        private static DateTime MinUnixTime => new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
 
         /// <summary>
         /// Applies a Gmt offset to the DateTime.
@@ -51,7 +51,7 @@ namespace Ministry
         /// <param name="time">The time to calculate seconds for.</param>
         /// <returns>The number of seconds since 1970.</returns>
         public static double ToUnixEpochTimeDouble(this DateTime time)
-            => time.ToGmtTime().Subtract(MinUnixTime).TotalSeconds;
+            => time.ToLocalTime().Subtract(MinUnixTime).TotalSeconds;
 
         /// <summary>
         /// Calculates the number of seconds since 1970, a Unix based date format.
