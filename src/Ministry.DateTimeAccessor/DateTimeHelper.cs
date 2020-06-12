@@ -42,7 +42,7 @@ namespace Ministry
         /// <param name="time">The time to calculate seconds for.</param>
         /// <returns>The number of seconds since 1970.</returns>
         public static long ToUnixEpochTime(this DateTime time)
-            => (long)time.ToGmtTime().Subtract(MinUnixTime).TotalSeconds;
+            => (long)time.ToUnixEpochTimeDouble();
 
         /// <summary>
         /// Calculates the number of seconds since 1970, a Unix based date format.
@@ -50,7 +50,34 @@ namespace Ministry
         /// <remarks>Converts the input <see cref="ToGmtTime"/> to account for the computer.</remarks>
         /// <param name="time">The time to calculate seconds for.</param>
         /// <returns>The number of seconds since 1970.</returns>
-        public static DateTime FromUnixEpochTime(this int seconds)
-            => MinUnixTime.AddSeconds(seconds);
+        public static double ToUnixEpochTimeDouble(this DateTime time)
+            => time.ToGmtTime().Subtract(MinUnixTime).TotalSeconds;
+
+        /// <summary>
+        /// Calculates the number of seconds since 1970, a Unix based date format.
+        /// </summary>
+        /// <remarks>Converts the input <see cref="ToGmtTime"/> to account for the computer.</remarks>
+        /// <param name="time">The time to calculate seconds for.</param>
+        /// <returns>The number of seconds since 1970.</returns>
+        public static DateTime FromUnixEpochTime(this long time)
+            => MinUnixTime.AddSeconds(time);
+
+        /// <summary>
+        /// Calculates the number of seconds since 1970, a Unix based date format.
+        /// </summary>
+        /// <remarks>Converts the input <see cref="ToGmtTime"/> to account for the computer.</remarks>
+        /// <param name="time">The time to calculate seconds for.</param>
+        /// <returns>The number of seconds since 1970.</returns>
+        public static DateTime FromUnixEpochTime(this int time)
+            => MinUnixTime.AddSeconds(time);
+
+        /// <summary>
+        /// Calculates the number of seconds since 1970, a Unix based date format.
+        /// </summary>
+        /// <remarks>Converts the input <see cref="ToGmtTime"/> to account for the computer.</remarks>
+        /// <param name="time">The time to calculate seconds for.</param>
+        /// <returns>The number of seconds since 1970.</returns>
+        public static DateTime FromUnixEpochTime(this double time)
+            => MinUnixTime.AddSeconds(time);
     }
 }
