@@ -6,12 +6,12 @@
     <Company>Minotech Ltd. (The Ministry of Technology) / Esoterix Systems Ltd.</Company>
     <Description>DateTimeAccessor for isolation of dates</Description>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Copyright>2019 Minotech Ltd.</Copyright>
+    <Copyright>2020 Keith Jackson / The Ministry of Technology</Copyright>
     <RepositoryUrl>https://github.com/ministryotech/date-time-abstractions.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <AssemblyVersion>1.0.1.0</AssemblyVersion>
-    <FileVersion>1.0.1.0</FileVersion>
-    <Version>1.0.1</Version>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+    <FileVersion>1.1.0.0</FileVersion>
+    <Version>1.1.0</Version>
     <PackageLicenseUrl>http://www.opensource.org/licenses/MIT</PackageLicenseUrl>
     <PackageProjectUrl>http://www.ministryotech.co.uk/developers/open-source-projects/</PackageProjectUrl>
   </PropertyGroup>
