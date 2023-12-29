@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Diagnostics.CodeAnalysis;
 
-// ReSharper disable once CheckNamespace
 namespace Ministry
 {
     /// <summary>
     /// Extension Methods for working with DateTime objects.
     /// </summary>
-    [SuppressMessage("ReSharper", "UnusedMember.Global")]
-    [SuppressMessage("ReSharper", "MemberCanBePrivate.Global")]
+    [SuppressMessage("ReSharper", "UnusedMember.Global", Justification = "Library")]
+    [SuppressMessage("ReSharper", "MemberCanBePrivate.Global", Justification = "Library")]
+    [SuppressMessage("ReSharper", "UnusedType.Global", Justification = "Library")]
     public static class DateTimeHelper
     {
         /// <summary>

@@ -1,19 +1,52 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard1.0;net40</TargetFrameworks>
-    <Authors>Keith Jackson</Authors>
-    <Company>Minotech Ltd. (The Ministry of Technology) / Esoterix Systems Ltd.</Company>
-    <Description>DateTimeAccessor for isolation of dates</Description>
+    <TargetFrameworks>net6.0;net8.0;netstandard2.0</TargetFrameworks>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <LangVersion>7.3</LangVersion>
+    <RootNamespace>Ministry</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <AssemblyVersion>2.0.1.0</AssemblyVersion>
+    <FileVersion>2.0.1.0</FileVersion>
+    <Version>2.0.1</Version>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <AnalysisMode>Recommended</AnalysisMode>
+    <AnalysisModeGlobalization>None</AnalysisModeGlobalization>
+    <AnalysisModeSecurity>All</AnalysisModeSecurity>
+    <AnalysisModeMaintainability>All</AnalysisModeMaintainability>
+    <AnalysisLevel>6.0</AnalysisLevel>
+  </PropertyGroup>
+
+  <PropertyGroup>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Copyright>2020 Keith Jackson / The Ministry of Technology</Copyright>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <Description>DateTimeAccessor for isolation of dates</Description>
+    <Authors>Keith Jackson</Authors>
+    <Company>Minotech Ltd. (The Ministry of Technology)</Company>
+    <Copyright>2024 Keith Jackson / The Ministry of Technology</Copyright>
     <RepositoryUrl>https://github.com/ministryotech/date-time-abstractions.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <AssemblyVersion>1.1.1.0</AssemblyVersion>
-    <FileVersion>1.1.1.0</FileVersion>
-    <Version>1.1.1</Version>
-    <PackageLicenseUrl>http://www.opensource.org/licenses/MIT</PackageLicenseUrl>
-    <PackageProjectUrl>http://www.ministryotech.co.uk/developers/open-source-projects/</PackageProjectUrl>
+    <IncludeContentInPack>true</IncludeContentInPack>
+    <PackageReadMeFile>README.md</PackageReadMeFile>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
+
+  <PropertyGroup>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <!--<WarningsNotAsErrors></WarningsNotAsErrors>--><!--Enable this to allow some warnings-->
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\LICENSE" Pack="true" PackagePath="" />
+    <None Include="..\..\README.md" Pack="true" PackagePath="" />
+  </ItemGroup>
 
 </Project>
